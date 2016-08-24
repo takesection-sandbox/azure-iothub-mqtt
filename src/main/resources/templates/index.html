@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8"/>
+    <script th:inline="javascript">
+    var obj = /*[[${obj}]]*/ {};
+    console.log(obj);
+    </script>
+  </head>
+  <body>
+    <form th:action="@{/send}" method="post">
+      <div><input type="text" name="message" placeholder="message"/></div>
+      <div><input type="submit" value="send"/></div>
+    </form>
+  </body>
+</html>
